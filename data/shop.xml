@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<shop>
+	<album>
+		<name>Catlins Bound</name>
+		<image>images/shop/cd_catlinsbound.jpg</image>
+		<year>2009</year>
+		<description>
+			Catlins Bound contains 15 songs relating to the ships built by William McPhee on Stewart Island and in the Catlins. (Catlins is on the south-east coast of the South Island of New Zealand. It is a rugged, remote and rather beautiful part of the country.) 
+		</description>
+		<description>
+			William McPhee was born in Nova Scotia, Canada of Highland Scots ancestry and he came to New Zealand in the late 1850s. He commenced ship-building at Waikawa, then Stewart Island and finally at Catlins River in 1866. He built some fine ketches and schooners for the New Zealand coastal trade and his biggest vessel regularly crossed the Tasman Sea to Australia.
+		</description>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Captain Tall (Rude Sunde)</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>Nora (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>The Anna (Warren Payne)</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>The Jane (Bob Large)</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>Captain John Mason (Rude Sunde)</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>Foveaux Strait (Bill Hanning's Lament) (Rude Sunde)</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>John Bullock (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>Catlin (Alex McClenna)</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Owake Belle (Bob Large)</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>Flying Eliza McPhee (Warren Payne)</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Owake (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>John Jack Me Darling (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>Tragedy of the Schooner Jane Hannah (Bob Large)</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Lovely Mary (Warren)</name>
+			</track>
+			<track>
+				<number>15</number>
+				<name>Catlins River Calling (Rudy Sunde)</name>
+			</track>
+		</tracklist>
+	</album>
+	<album>
+		<name>On The Road Together</name>
+		<image>images/shop/cd_ontheroadtogether.jpg</image>
+		<year>2009</year>
+		<descriptionlead>The Maritime Crew &amp; Folsgearster Folk live at the Landscape Studio, Gauw Friesland 2007</descriptionlead>
+		<description>The Folsgearster Folkies are:</description>
+		<description>Peter van der Werf, Rinske Elzinga, Marco Rypma, Gerrit Rypma, Ben Regeling, Johannes van der Werf.</description>
+		<description>The Maritime Crew are:</description>
+		<description>Lew Black, Bob Large, Rudy Sunde, Warren Payne.</description>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Dumbarton Drums</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>The Town I Loved So Well</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Die Hamburger Veermaster</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>The Beacon Light</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>The Star of The County Down</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>Captain Matheson</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Pokarekare Ana</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>Haal Op</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Haul Boys Haul</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>Soon May The Wellerman Come</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Pay Me My Money Down</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>The Black Velvet Band</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>John Kanakanaka</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Westering Home</name>
+			</track>
+		</tracklist>
+	</album>
+	<album>
+		<name>An Audience With The Maritime Crew</name>
+		<image>images/shop/cd_audiencewiththemc.jpg</image>
+		<year>2006</year>
+		<descriptionlead>Recorded live at the 2006 Auckland Folk Festival.</descriptionlead>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Hurrah for our Captain</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>A'Roving</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Bold Riley</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>Jessie Craig</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>Bonny Ship the Diamond</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>Banks of Newfoundland</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Philomena D</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>Haal Op</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Whale of a Tale</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>The Orpheus</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Bully in the Alley</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>Shanty Time in Niebull</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>Westering Home</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Ballina Whalers</name>
+			</track>
+			<track>
+				<number>15</number>
+				<name>Mingulay Boat Song</name>
+			</track>
+			<track>
+				<number>16</number>
+				<name>Farewell Shanty</name>
+			</track>
+		</tracklist>
+	</album>
+	<album>
+		<name>Auckland To The Bluff</name>
+		<image>images/shop/cd_aucklandtothebluff.jpg</image>
+		<year>2005</year>
+			<descriptionlead>The Maritime Crew sing the sea songs of Rudy Sunde.</descriptionlead>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Balclutha</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>Orpheus</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Auckland to the Bluff</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>Farewell Love</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>Morning Glory</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>James Craig</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Edwin Fox</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>In Iquique</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Waiting for the Day</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>Hurrah for our Captain</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Julie Anne</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>Shore Whalers</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>Jessie Craig</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Philomena D</name>
+			</track>
+			<track>
+				<number>15</number>
+				<name>Spray of the Ocean</name>
+			</track>
+			<track>
+				<number>16</number>
+				<name>Ocean Queen</name>
+			</track>
+			<track>
+				<number>17</number>
+				<name>Under the Southern Cross</name>
+			</track>
+		</tracklist>
+	</album>
+	<album>
+		<name>Under The Southern Cross</name>
+		<image>images/shop/cd_underthesoutherncross.jpg</image>
+		<year>2003</year>
+		<descriptionlead>New Zealand Sea Shanties.</descriptionlead>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Under the Southern Cross (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>Foggy, Foggy Banks (trad)</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Boundless and Free (Bob Large)</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>James Craig (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>The Boy on the Hill (Tom Wood)</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>Soon may the Wellerman Come (trad)</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Spray of the Ocean (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>New Zealand Whales (trad)</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Here's A Health to the Men in the Crew (Bob Large)</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>Across the Line (trad)</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Longliners (Peter Collier)</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>John Smith AB (trad)</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>Julie Anne (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Box of Tricks (Bob Lovell)</name>
+			</track>
+			<track>
+				<number>15</number>
+				<name>Southern Ocean (Bob Watson)</name>
+			</track>
+			<track>
+				<number>16</number>
+				<name>Davy Lowston (trad)</name>
+			</track>
+			<track>
+				<number>17</number>
+				<name>The Orpheus (Andrew Gough)</name>
+			</track>
+			<track>
+				<number>18</number>
+				<name>Come all you Tonguers (trad)</name>
+			</track>
+
+		</tracklist>
+	</album>
+	<album>
+		<name>Live At The Auckland Folk Festival 2000</name>
+		<image>images/shop/cd_afflive2000.jpg</image>
+		<year>2000</year>
+		<descriptionlead>Recorded live at the 2006 Auckland Folk Festival.</descriptionlead>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Shantyman (Bob Watson)</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>Turkish Man-O'War</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Davy Lowston</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>The Rosabella</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>Home, Boys, Home</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>Yarmouth Town</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Rio Grande</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>Here's a Health to the Men in the Crew (Bob Large)</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>John Cherokee</name>
+			</track>
+		</tracklist>
+	</album>
+	<album>
+		<name>Hurrah For Our Captain</name>
+		<image>images/shop/cd_hurrahforourcaptain.jpg</image>
+		<year>1996</year>
+		<descriptionlead>No longer available.</descriptionlead>
+		<tracklist>
+			<track>
+				<number>1</number>
+				<name>Hurrah For Our Captain (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>2</number>
+				<name>Haul On the Bowline (Trad)</name>
+			</track>
+			<track>
+				<number>3</number>
+				<name>Wild Goose (Trad)</name>
+			</track>
+			<track>
+				<number>4</number>
+				<name>The Bonnie Ship, The 'Diamond' (Trad)</name>
+			</track>
+			<track>
+				<number>5</number>
+				<name>We're All Bound To Go (Trad)</name>
+			</track>
+			<track>
+				<number>6</number>
+				<name>The Alabama (Trad)</name>
+			</track>
+			<track>
+				<number>7</number>
+				<name>Bantry Bay (Trad)</name>
+			</track>
+			<track>
+				<number>8</number>
+				<name>Die Aliebama (Trad)</name>
+			</track>
+			<track>
+				<number>9</number>
+				<name>Home Boys Home (Trad)</name>
+			</track>
+			<track>
+				<number>10</number>
+				<name>Chicken On The Raft (Cyril Tawney)</name>
+			</track>
+			<track>
+				<number>11</number>
+				<name>Three Sea Captains (Trad)</name>
+			</track>
+			<track>
+				<number>12</number>
+				<name>Morning Glory (Rudy Sunde)</name>
+			</track>
+			<track>
+				<number>13</number>
+				<name>Bold Riley (Trad)</name>
+			</track>
+			<track>
+				<number>14</number>
+				<name>Barrett's Privateers (Stan Rogers)</name>
+			</track>
+			<track>
+				<number>15</number>
+				<name>Holy Ground (Trad)</name>
+			</track>
+			<track>
+				<number>16</number>
+				<name>Is The Big Fellow Gone (Rod Shearman)</name>
+			</track>
+			<track>
+				<number>17</number>
+				<name>Portsmouth (Trad)</name>
+			</track>
+			<track>
+				<number>18</number>
+				<name>The Endeavour (Alan Ralph)</name>
+			</track>
+			<track>
+				<number>19</number>
+				<name>Blood Red Roses (Trad)</name>
+			</track>
+			<track>
+				<number>20</number>
+				<name>General Taylor (Trad)</name>
+			</track>
+			<track>
+				<number>21</number>
+				<name>Leaving Of Liverpool (Trad)</name>
+			</track>
+			<track>
+				<number>22</number>
+				<name>Off To California (Trad)</name>
+			</track>
+		</tracklist>
+	</album>
+</shop>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Maritime Crew - Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Come see The Maritime Crew at Auckland's Voyager Martitime Museum! Check the Events page for dates.">
+    <meta name="author" content="The Maritime Crew">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+		
+	<!-- Project -->
+    <link href="assets/css/application.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<link rel="shortcut icon" href="images/layout/keyicon.png">
+
+	<style>
+	
+		.album-box {
+			padding-top: 15px;
+		}
+		.album-box img {
+			
+			-webkit-border-radius: 0px 15px 0px 15px;
+			   -moz-border-radius: 0px 15px 0px 15px;
+					border-radius: 0px 15px 0px 15px;
+			   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+				  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+					   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+		}
+		.album-box img:hover {
+			
+			-webkit-border-radius: 0px 15px 0px 15px;
+			   -moz-border-radius: 0px 15px 0px 15px;
+					border-radius: 0px 15px 0px 15px;
+			   -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 2.8);
+				  -moz-box-shadow: 0 1px 15px rgba(0, 0, 0, 2.8);
+					   box-shadow: 0 1px 15px rgba(0, 0, 0, 2.8);
+		}
+		.album-container {
+			border-style: solid;
+			border-width: 2px;
+			-webkit-border-radius: 15px 15px 15px 15px;
+			   -moz-border-radius: 15px 15px 15px 15px;
+					border-radius: 15px 15px 15px 15px;
+		}
+	
+	</style>
+	
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">The Maritime Crew</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+			  <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li class="active"><a href="gallery.html">Gallery</a></li>
+              <li><a href="songs.html">Songs</a></li>
+              <li><a href="brew.html">Brew</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+	<div class="container standard-background">
+		<div id="albumSet">
+			<div class="row-fluid" style="margin: 0 0 30px 0;" data-template>
+				<!-- The data-class is only populated in blank panels, so if the panel is blank, the class element becomes class="i-am-a-blank-box", which means no styling gets applied. This uses the "Attribute Setter feature of Tempo. -->
+				<div class="span3 album-container" style="text-align: center; min-height: 190px; position: relative;" data-class="{{blank}}" data-template="sub">
+					{% if name != "" %}
+						<div class="album-box">
+							<a href="album.html?id={{id}}"><img src="http://graph.facebook.com/{{cover_photo}}/picture?type=album" /></a>
+						</div>
+						<div style="bottom: 10px; position: absolute; width:100%">
+							<a href="album.html?id={{id}}">{{name}}</a>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div> <!-- /container -->
+
+	<hr class="hero-hr">
+	
+	<footer>
+		<div class="copyright">
+			&copy; The Maritime Crew 2013
+		</div>
+	</footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+	<!-- Imported function libraries. -->
+	<script src="assets/js/tempo.js"></script> <!-- IMPORTANT: must use tempo.js, not tempo.min.js, because I found that _tempo.index doesn't work if the min file is used. -->
+	
+	<!-- Application-specific functions. -->
+	<script src="assets/js/application.js"></script>
+
+	<script>
+		var facebookPage = "TheMaritimeCrew";
+		
+		var albums = Tempo.prepare("albumSet");
+
+		$(document).ready(function() {
+			$.getJSON("https://graph.facebook.com/" + facebookPage + "/albums?fields=id,count,name,cover_photo,type&callback=?",
+				function(result){
+					var albumArray = $.getFacebookPhotoGridArray(result.data, 4);
+					albums.render(albumArray);
+				});
+			});
+			
+	</script>
+
+
+</body>
+</html>

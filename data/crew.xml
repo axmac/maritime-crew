@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<crewmen>
+	<crew>
+		<name>Lew Black</name>
+		<description>Lew is in the UK!</description>
+		<image>images/bio/bio_lew.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>Paul Howarth</name>
+		<description>Paul is in NZ!</description>
+		<image>images/bio/bio_paul.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>Bob Large</name>
+		<description>Bob is sailing!</description>
+		<image>images/bio/bio_bob.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>Alex McClennan</name>
+		<description>Alex is in NZ!</description>
+		<image>images/bio/bio_alex.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>John McGowan</name>
+		<description>John is in NZ!</description>
+		<image>images/bio/bio_john.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>Warren Payne</name>
+		<description>Warren is in NZ!</description>
+		<image>images/bio/bio_warren.jpg</image>
+		<status>current</status>
+	</crew>
+	<crew>
+		<name>Rudy Sunde</name>
+		<description/>
+		<image/>
+		<status>emeritus</status>
+	</crew>
+</crewmen>

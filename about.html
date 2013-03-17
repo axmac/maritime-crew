@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Maritime Crew - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Come see The Maritime Crew at Auckland's Voyager Martitime Museum! Check the Events page for dates.">
+    <meta name="author" content="The Maritime Crew">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+	<!-- Project -->
+    <link href="assets/css/application.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<link rel="shortcut icon" href="images/layout/keyicon.png">
+
+	<style>
+
+		.galleria-stage {
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+  
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">The Maritime Crew</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+			  <li class="active"><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="songs.html">Songs</a></li>
+              <li><a href="brew.html">Brew</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+	<div class="container">
+		<div id="galleria"></div>
+
+		
+		<div class="content-container">
+			<p class="lead">
+				The Maritime Crew formed in 1994 and has since entertained audiences around New Zealand and in Europe.
+				The Maritime Crew perform regularly on the first of the month (with occasional variation for public holiday conflicts) at the <a href="http://www.maritimemuseum.co.nz" target="#blank">Voyager Auckland Maritime Museum</a>. Check the <a href="events.html">Events</a> page for the next performance date.
+			</p>
+			<p class="lead">
+				The <a href="#bios">current lineup</a> is, in alphabetical order: Lew Black, Paul Howarth, Bob Large, Alex McClennan, John McGowan and Warren Payne.
+			</p>
+
+			<a name="bios"></a>
+
+			<p></p>
+
+			<h1>Crew Bios</h1>
+			<div id="crewSet">
+				<div class="row-fluid" data-template>			
+
+				<div class="span4 album-container"  data-class="{{blank}}" data-template="sub">
+					{% if name != "" %}
+						<div class="image-box">
+							<img src="{{image}}" alt="{{name}}" />
+						</div>
+						<div style="margin: 10px; text-align: center">
+							<h3>{{name}}</h3>
+						</div>
+						<div style="margin: 10px; text-align: center">
+							<p>{{description}}</p>
+						</div>
+					{% endif %}
+				</div>
+
+			</div> <!-- /crewset -->
+
+		</div>
+	</div> <!-- /container -->
+
+	<hr class="hero-hr">
+	
+	<footer>
+		<div class="copyright">
+			&copy; The Maritime Crew 2013
+		</div>
+	</footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+	<!-- Imported function libraries. -->
+	<script src="assets/js/tempo.js"></script> <!-- IMPORTANT: must use tempo.js, not tempo.min.js, because I found that _tempo.index doesn't work if the min file is used. -->
+	<script src="assets/js/jquery.xml2json.js"></script>	
+	<script src="assets/galleria/galleria-1.2.9.js"></script>
+
+	<!-- Application-specific functions. -->
+	<script src="assets/js/application.js"></script>
+
+	<script>
+		var crew = Tempo.prepare("crewSet");
+
+		$(document).ready(function() {
+
+			// Load the gallery data.
+			$.get("data/about.xml",
+				function(result){
+					var json = $.xml2json(result);
+
+					var galleryArray = [];
+					// Create a Galleria-compliant array from the loaded data.
+					for ( var i = 0; i < json.slide.length ; i++ ) {
+						galleryArray.push({ image: json.slide[i].image, title : json.slide[i].caption });
+					}
+					
+					Galleria.loadTheme("assets/galleria/themes/classic/galleria.classic.min.js");
+					
+					Galleria.on("loadfinish", function(e) {
+						// Locate the caption area at the bottom left of the screen, and centre the text. Images are always the same size.
+						$(".galleria-info").css("bottom", 0);
+						$(".galleria-info").css("left", 0);
+						$(".galleria-info").css("width", "100%");
+						$(".galleria-info-title").css("text-align", "center");
+
+						// Constrain the container height to the image height to remove the thumbnail space.
+						$.galleriaConstrainToImageHeight(e.imageTarget);
+						});
+					
+					Galleria.run("#galleria", {
+						dataSource: galleryArray,
+						transition: "slide",
+						autoplay: true,
+						thumbnails: false,
+						showCounter: false,
+						height: 500 // Give it plenty of height to so that it uses up the full space.
+						});
+					});
+
+				// Load the crew bio data.
+				$.get("data/crew.xml",
+					function(result){
+						var json = $.xml2json(result);
+
+						var crewArray = $.getLocalPhotoGridArray(json.crew, 3);
+						crew.render(crewArray);
+					});
+			});
+
+	</script>
+
+</body>
+</html>

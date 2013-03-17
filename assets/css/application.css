@@ -1,0 +1,334 @@
+/*!
+ * rgb(27, 27, 27): close to black.
+ * rgb(90, 90, 110), rgb(135, 135, 205): blue-to-blue gradient in the nav bar.
+ * rgb(120, 120, 190): light blue for the nav border.
+ * rgb(53, 53, 128): background for a selected nav.
+ * rgb(204, 204, 204): light grey, non-selected nav item's text.
+ *
+ * rgb(0, 0, 128): dark blue, main font colour.
+ * 
+ */
+
+/* Defaults, if not overridden by screen-size-specific classes. */
+
+/*
+ * Navbar. 
+ *
+ * TODO: Need to remove this in favour of a customised bootstrap with the desired styling.
+ */
+ /*
+.navbar-inverse .navbar-inner {
+    background-color: rgb(27, 27, 27);
+    background-image: linear-gradient(to bottom, rgb(90, 90, 110), rgb(135, 135, 205));
+    background-repeat: repeat-x;
+    border-color: rgb(120, 120, 190);
+}
+.navbar-inverse .brand {
+    color: rgb(0, 0, 128);
+}
+// Hides the 'selected nav bar item' highlight.
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    background-color: rgb(27, 27, 27);
+    background-image: linear-gradient(to bottom, rgb(90, 90, 110), rgb(135, 135, 205));
+    background-repeat: repeat-x;
+    box-shadow: 0px 0px 0px;
+
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: rgb(204, 204, 204);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+}
+*/
+/*
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}*/
+	  
+/*
+ * Hero container.
+ */
+.standard-background {
+	background-image: url("../../images/layout/mc_bg2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10px;
+	margin-bottom: 0px;
+
+	-moz-border-radius: 15px 15px 15px 15px;
+	border-radius: 15px 15px 15px 15px;	
+}
+.news-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	width: auto;
+	overflow: auto;
+}
+.hero-news {
+	margin-bottom: 0px;
+}
+
+/*
+ * News panel
+ */
+.news-table-header {
+	font-size: 10pt;
+	font-weight: bold;
+}
+.news-table-header-date {
+	font-size: 8pt;
+	font-variant: small-caps;
+}
+.news-table-body {
+	font-size: 10pt;
+}
+.news-table-body a  {
+	text-decoration: none;
+}
+.news-title {
+	text-align: center;
+}
+
+/*
+ * About page.
+ */
+.carousel-image  {
+	margin: 0 auto;
+}
+.carousel-caption {
+	text-align: center;
+}
+.carousel {
+	margin-bottom: 0px;
+}
+.content-container {
+	background-image: url("../../images/layout/mc_bg2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding: 15px 19px 14px;
+}
+
+.hero-hr {
+	margin: 10px 0px;
+}
+
+/*
+ * Clickable table row.
+ */
+.entries-table {
+    border-collapse: collapse;
+	margin-bottom: 0px;
+}
+.entries-table tr {
+    border-top: 1px solid #fff;
+}
+.entries-table .entry-summary:hover {
+    cursor: pointer;
+}
+
+/*
+ * Social icons.
+ */
+.row-fluid [class*="span"].social-icons {
+	float: right;
+}
+.socialicon {
+    width:35px;
+    height:35px;
+    display:block;
+}
+.socialicon:hover {
+    background-position: -35px;
+}
+
+#facebook {
+    background-image: url(../social/facebook_rollover.png)
+    }
+#twitter {
+    background-image: url(../social/twitter_rollover.png)
+    }
+#myspace {
+    background-image: url(../social/myspace_rollover.png)
+    }
+#youtube {
+    background-image: url(../social/youtube_rollover.png)
+    }
+#rss {
+    background-image: url(../social/rss_rollover.png)
+    }
+
+/*
+ * Image boxes and banner on the home page.
+ */
+.image-box {
+	text-align: center;
+}
+.image-box img {
+	margin: 20px 20px 0px 0px;
+	
+	-webkit-border-radius: 0px 15px 0px 15px;
+       -moz-border-radius: 0px 15px 0px 15px;
+            border-radius: 0px 15px 0px 15px;
+	   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+		  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+			   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+.banner-fluid {
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+.banner-box {
+	-webkit-border-radius: 0px 15px 0px 15px;
+       -moz-border-radius: 0px 15px 0px 15px;
+            border-radius: 0px 15px 0px 15px;
+	   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+		  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+			   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+/*
+ * -------------------------------------------
+ * Overrides for standard Bootstrap behaviour.
+ * -------------------------------------------
+ */
+
+/* Modal.* is overridden to prevent the slide animation; i.e. fade only. Position is relative 10% from top. */
+/* Currently not used
+.modal.fade {
+    -webkit-transition: opacity .2s linear, none;
+    -moz-transition: opacity .2s linear, none;
+    -ms-transition: opacity .2s linear, none;
+    -o-transition: opacity .2s linear, none;
+    transition: opacity .2s linear, none;
+    top: 10%;
+}
+.modal.fade.in {
+	top: 10%;
+}*/
+
+.copyright {
+    text-align: center;
+}
+
+
+.event-box {
+	background-color: rgb(255,255,255);
+	-webkit-border-radius: 0px 15px 0px 15px;
+       -moz-border-radius: 0px 15px 0px 15px;
+            border-radius: 0px 15px 0px 15px;
+	   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+		  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+			   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+/*
+ * Screen-size specific overrides.
+ */
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	.row-fluid [class*="span"].social-icons {
+		margin-right: -20px;
+	}
+
+}
+
+/* Standard desktop */
+@media (min-width: 980px) {
+
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	.row-fluid [class*="span"].social-icons {
+		margin-right: -20px;
+	}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.row-fluid [class*="span"].social-icons {
+		margin-right: -10px;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.row-fluid [class*="span"].social-icons {
+		display: inline;
+		text-align: center;
+		margin-top: 10px;
+	}
+	.socialicon {
+		display: inline-block;
+	}
+	.banner-fluid {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	.modal.fade {
+		top: 0px;
+	}
+	.modal.fade.in {
+		top: 0px;
+	}
+
+}
+
+
+/*
+ * Galleria styles.
+ */
+ 
+/* A border with rounded corners, and centered within the parent container. */
+.galleria-container {
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	
+	width: 50%;
+	margin: auto;			
+}
+.galleria-counter {
+	color: #000000;
+}
+/* Center the thumbnail panel. */
+.galleria-thumbnails {
+	width: 100%;
+	margin: auto;
+}
+.galleria-info-text {
+	display: block;
+	padding: 5px;
+	background-color: rgba(128,128,128,0.5);
+}
+.galleria-info {
+	top: auto;
+	position: absolute;
+}
+.galleria-info-title {
+	margin: 0 0 0px;
+}
+.galleria-info-link {
+	display: none;
+}
+.notouch .galleria-thumb-nav-left:hover, .notouch .galleria-thumb-nav-right:hover {
+	background-color: #BBBBBB;
+	opacity: .5;
+}
