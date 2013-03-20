@@ -147,23 +147,37 @@
 	<script>
 		// Specify the time format for the event display.
 		var eventTimeFormat = "h a";
-	
+		var maxEvents = 10;
+		
 		$(document).ready(function() {
 			// Load XML into JSON and render with Tempo.
 			var shows = Tempo.prepare("showEntries");
 			$.get("load_feed.php?source=futureshows",
 				function(xml) {
 					var data = $.xml2json(xml);
-
+					var events = [];
+					
+					// Major annoyance: if the feed returns only one show, it's not in an array.
+					if (data.show.length == undefined) {
+						events[0] = data.show;
+					} else {
+						events = data.show;
+					}
+					
 					// Put a date+time entry into the json object.
-					for (i = 0; i < data.show.length; i++) {
-						var entry = data.show[i];
+					for (i = 0; i < events.length; i++) {
+						var entry = events[i];
 						entry.dateTime = entry.date + " " + entry.timeSet.substr(0,8);
 					}
 
-					shows.render(data.show);
+					if (maxEvents > events.length)
+						maxEvents = events.length;
+						
+					var sliced = events.slice(0, maxEvents);
 
-					for (i = 0; i < data.show.length; i++) {
+					shows.render(sliced);
+
+					for (i = 0; i < events.length; i++) {
 						$("#eventSummary-" + i).click(function() {
 							var id = this.id;
 							var detail = "#eventDetail-" + id.substr("eventSummary-".length);
