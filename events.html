@@ -157,7 +157,7 @@
 					var data = $.xml2json(xml);
 					var events = [];
 					
-					// Major annoyance: if the feed returns only one show, it's not in an array.
+					// Annoyance: if the feed returns only one entry, xml2json doesn't return an array.
 					if (data.show.length == undefined) {
 						events[0] = data.show;
 					} else {
