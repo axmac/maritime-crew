@@ -78,21 +78,7 @@
 							</tr>		
 							<tr class="news-table-body">
 								<td>
-									<p><a href="#newsModal-{{_tempo.index}}" data-toggle="modal">{{contentSnippet | truncate '60', ' <i>...click for more</i>'}}</a></p>
-
-									<!-- Modal -->
-									<div id="newsModal-{{_tempo.index}}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h3 id="modal-label">{{title}}</h3>
-										</div>
-										<div class="modal-body">
-											<p>{{content}}</p>
-										</div>
-										<div class="modal-footer">
-											<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-										</div>
-									</div>
+									<p>{{description}}</a></p>
 								</td>
 							</tr>
 							</table> <!--/.hero-news -->
@@ -131,11 +117,18 @@
 		var maxEntries = 10;
 		
 		var headlines = Tempo.prepare("headlineEntries"); 
-		// Uses Google feed api: http://blog.marcqualie.com/2011/03/xml-to-json-using-google-feed-api
 		$(document).ready(function() {
-			$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://feeds.feedburner.com/artistdata/OGPl&callback=?",
-				function(data){
-					var news = data.responseData.feed.entries;
+			$.get("load_feed.php?source=rss",
+				function(xml) {
+					var data = $.xml2json(xml);
+					var news = [];
+					
+					// Annoyance: if the feed returns only one entry, xml2json doesn't return an array.
+					if (data.channel.item.length == undefined) {
+						news[0] = data.channel.item;
+					} else {
+						news = data.channel.item;
+					}
 					
 					if (maxEntries > news.length)
 						maxEntries = news.length;
