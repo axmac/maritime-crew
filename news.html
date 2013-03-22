@@ -73,7 +73,7 @@
 							<table class="table table-striped table-condensed hero-news">
 							<tr class="news-table-header">
 								<td>
-									{{title}} <span class="news-table-header-date">{{publishedDate | date 'DD MMM, YYYY'}}</span>
+									{{title}} <span class="news-table-header-date">{{pubDate | date 'DD MMM, YYYY'}}</span>
 								</td>
 							</tr>		
 							<tr class="news-table-body">
@@ -110,9 +110,6 @@
 	<!-- http://www.fyneworks.com/jquery/xml-to-json/ -->
 	<script src="assets/js/jquery.xml2json.js"></script>
 
-	<!-- https://github.com/phstc/jquery-dateFormat -->
-	<script src="assets/js/jquery.dateFormat.js"></script>
-	
 	<script>
 		var maxEntries = 10;
 		
