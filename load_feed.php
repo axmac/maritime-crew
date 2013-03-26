@@ -1,11 +1,11 @@
 <?php
 	// ---------------------------------------------------------------------------------------------
 	// Set the URLs from ArtistData>Tools>Data Feeds into these variables.
-	$pastShowsXml = "http://artistdata.sonicbids.com/emily-smith/shows/xml/past";
-	$futureShowsXml = "http://artistdata.sonicbids.com/emily-smith/shows/xml/future";
-	$allShowsXml = "http://artistdata.sonicbids.com/emily-smith/shows/xml/all";
-	$newsXml = "http://artistdata.sonicbids.com/emily-smith/shows/xml/news";
-	$blogXml = "http://artistdata.sonicbids.com/emily-smith/shows/xml/blog";
+	$pastShowsXml = "http://artistdata.sonicbids.com/the-maritime-crew/shows/xml/past";
+	$futureShowsXml = "http://artistdata.sonicbids.com/the-maritime-crew/shows/xml/future";
+	$allShowsXml = "http://artistdata.sonicbids.com/the-maritime-crew/shows/xml/all";
+	$newsXml = "http://artistdata.sonicbids.com/heidi-talbot/news/xml";
+	$blogXml = "http://artistdata.sonicbids.com/heidi-talbot/blog/xml";
 	$rssXML = "http://feeds.artistdata.com/rss.newfeeds/artist/AR-3XF14A8305TRU86G/rss";
 	// ---------------------------------------------------------------------------------------------
 	
