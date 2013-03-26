@@ -71,7 +71,7 @@
       </div>
     </div>
 
-	<div class="container" id="showEntries">
+	<div class="container" id="eventEntries">
 		<div class="standard-background">
 			<p class="lead">
 				The Maritime Crew perform on the first of the month at the <a href="http://www.maritimemuseum.co.nz">Voyager Auckland Maritime Museum</a>. Performances are free to the public. The date varies when public holidays fall at the beginning of the month.
@@ -79,16 +79,12 @@
 
 			<div class="row-fluid">
 				<div class="span8 offset2 event-box">
-<!--					<div class="news-title">
-						<img src="images/layout/title_events.png" />
-					</div>
-					-->
 					<div class="news-container">
 						<div data-template>
 							<table class="table table-striped table-condensed entries-table" style="width:100%" id="eventTable" >
 								<tr class="entry-summary" id="eventSummary-{{_tempo.index}}">
-									<td width="85px">
-										{{date | date 'DD MMM, YYYY'}}
+									<td width="85px" style="white-space: nowrap">
+										<span class="show-date">{{date}}</span>
 									</td>
 									<td width="40%" class="show-venue">
 										{{venueName}}
@@ -105,7 +101,7 @@
 								</tr>
 								<tr id="eventDetail-{{_tempo.index}}" style="display: none;">
 									<td valign="top" colspan="5">
-										Show time: <span class="show-time">{{dateTime}}</span> {% if timeZone != '' %}<span class="show-timezone">({{timeZone}})</span>{% endif %}
+										Show time: <span class="show-time">{{gmtDate}}</span> {% if timeZone != '' %}<span class="show-timezone">({{timeZone}})</span>{% endif %}
 										<br />
 										Venue: <span class="show-venue">{{venueName}}</span>
 										<span class="show-description">{{description}}</span>
@@ -141,17 +137,21 @@
 	<!-- http://www.fyneworks.com/jquery/xml-to-json/ -->
 	<script src="assets/js/jquery.xml2json.js"></script>
 
-	<!-- https://github.com/phstc/jquery-dateFormat -->
-	<script src="assets/js/jquery.dateFormat.js"></script>
+	<!-- http://momentjs.com/ -->
+	<script src="assets/js/moment.min.js"></script>
 	
 	<script>
-		// Specify the time format for the event display.
-		var eventTimeFormat = "h a";
-		var maxEvents = 10;
+		// Specify the date and time formats.
+		var eventDateFormat = "D MMM YYYY";
+		var eventTimeFormat = "h:mm a";
+		
+		var maxItems = 10;
 		
 		$(document).ready(function() {
+		
 			// Load XML into JSON and render with Tempo.
-			var shows = Tempo.prepare("showEntries");
+			var eventEntries = Tempo.prepare("eventEntries");
+
 			$.get("load_feed.php?source=futureshows",
 				function(xml) {
 					var data = $.xml2json(xml);
@@ -163,20 +163,18 @@
 					} else {
 						events = data.show;
 					}
-					
-					// Put a date+time entry into the json object.
-					for (i = 0; i < events.length; i++) {
-						var entry = events[i];
-						entry.dateTime = entry.date + " " + entry.timeSet.substr(0,8);
-					}
 
-					if (maxEvents > events.length)
-						maxEvents = events.length;
+					// Drop the max if the default is more than the array length.
+					if (maxItems > events.length)
+						maxItems = events.length;
 						
-					var sliced = events.slice(0, maxEvents);
+					// Drop the array size to the desired max.
+					var sliced = events.slice(0, maxItems);
 
-					shows.render(sliced);
+					// Call the tempo renderer.
+					eventEntries.render(sliced);
 
+					// Add a toggle event to each entry to show/hide the detail when clicked.
 					for (i = 0; i < events.length; i++) {
 						$("#eventSummary-" + i).click(function() {
 							var id = this.id;
@@ -185,12 +183,14 @@
 						});
 					}
 
+					// Use moment to format the dates as the tempo date formatter seems quite unreliable.
+					$(".show-date").each(function (idx, elem) {
+						var showTime = moment($(elem).text());
+						$(elem).text(showTime.format(eventDateFormat));
+					});
 					$(".show-time").each(function (idx, elem) {
-						if ($(elem).is(":input")) {
-							$(elem).val($.format.date($(elem).val(), eventTimeFormat));
-						} else {
-							$(elem).text($.format.date($(elem).text(), eventTimeFormat));
-						}
+						var showTime = moment($(elem).text());
+						$(elem).text(showTime.format(eventTimeFormat));
 					});
 				});
 			});
