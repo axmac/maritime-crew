@@ -101,11 +101,10 @@
 								</tr>
 								<tr id="eventDetail-{{_tempo.index}}" style="display: none;">
 									<td valign="top" colspan="5">
-										Show time: <span class="show-time">{{gmtDate}}</span> {% if timeZone != '' %}<span class="show-timezone">({{timeZone}})</span>{% endif %}
+										Show time: <span class="show-time">{{dateTime}}</span> {% if timeZone != '' %}<span class="show-timezone">({{timeZone}})</span>{% endif %}
 										<br />
 										Venue: <span class="show-venue">{{venueName}}</span>
-										<span class="show-description">{{description}}</span>
-										Website: <span class="show-venue-url"> <a href="{{venueURI}}" target="_blank">{{venueURI}}</a></span>
+										<span class="show-description">{{description}} {% if venueURI != '' %} <a href="{{venueURI}}" target="_blank">{{venueURI}}</a> {% endif %}</span>
 									</td>
 								</tr>
 							</table>
@@ -164,6 +163,13 @@
 						events = data.show;
 					}
 
+					// Put a date+time entry into the json object that represents the local datetime entered into ArtistData.
+					// DON'T use gmtDate as that gives the actual GMT date, i.e. the date adjusted for local timezone, which isn't what we want.
+					for (i = 0; i < events.length; i++) {
+						var entry = events[i];
+						entry.dateTime = entry.date + " " + entry.timeSet.substr(0,8);
+					}
+
 					// Drop the max if the default is more than the array length.
 					if (maxItems > events.length)
 						maxItems = events.length;
@@ -188,6 +194,7 @@
 						var showTime = moment($(elem).text());
 						$(elem).text(showTime.format(eventDateFormat));
 					});
+					// Time format.
 					$(".show-time").each(function (idx, elem) {
 						var showTime = moment($(elem).text());
 						$(elem).text(showTime.format(eventTimeFormat));
